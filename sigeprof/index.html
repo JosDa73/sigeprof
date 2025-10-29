@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es-CO" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Tipos de Caracteres que Acepta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Responsive-->
+    <title>SIGEPROF</title>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+
+    <!--SEO Tags-->
+    <meta name="author" content="SIGEPROF">
+    <meta name="description" content="Aplicativo Web Bootstrap">
+    <meta name="keywords"
+        content="SENA, sena, Sena, PROYECTO, proyecto, Proyecto, FORMATIVO, formativo, Formativo, SISTEMA, sistema, Sistema, GESTION, gestion, Gestion, SIGEPROF, sigeprof, Sigeprof">
+
+    <!--Optimization Tags-->
+    <meta name="theme-color" content="#000000">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandlhledFriendly" content="true">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-traslucent">
+
+    <!--Styles and Complements Bootstrap 5.3.3.0-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!--Estilos personalizados para mejorar el diseño-->
+    <style>
+        body {
+            background: linear-gradient(135deg, #e3f2fd 0%, #fff 100%);
+        }
+
+        .navbar {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar-brand img {
+            transition: transform 0.3s;
+        }
+
+        .navbar-brand img:hover {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .hero-section {
+            background: linear-gradient(120deg, #1976d2 60%, #64b5f6 100%);
+            color: #fff;
+            padding: 60px 0 40px 0;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 30px;
+        }
+
+        .hero-section img {
+            max-width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+            padding: 32px 24px;
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            color: #1976d2;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .card-integrante {
+            transition: box-shadow 0.3s, transform 0.3s;
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+        }
+
+        .card-integrante:hover {
+            box-shadow: 0 6px 24px rgba(25, 118, 210, 0.18);
+            transform: translateY(-6px) scale(1.03);
+        }
+
+        .footer {
+            background: #212121;
+            color: #fff;
+            padding: 24px 0 12px 0;
+            font-size: 16px;
+            border-radius: 24px 24px 0 0;
+        }
+
+        /* ✅ Solución para el scroll con navbar fijo */
+        [id] {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body class="h-100">
+
+    <!--HTML Layout-->
+
+    <header>
+        <!--Navbar Mejorada-->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/logo.png" alt="SIGEPROF Logo" style="width: 60px" /> SIGEPROF
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar" aria-label="Boton de menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#intro">Introducción</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#obj">Objetivos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#prob">Problema y Solución</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#kan">Kanban</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#intg">Integrantes</a></li>
+                    </ul>
+                    <button class="btn btn-light text-primary fw-bold" type="button"
+                        onclick="location.href='app/'">Entrar</button>
+                </div>
+            </div>
+        </nav>
+
+        <!--Hero Section-->
+        <section class="hero-section pt-5 mt-5" id="img">
+            <img src="assets/img/logo.png" alt="SIGEPROF Logo" />
+            <h1 class="display-4 fw-bold mb-3">Bienvenido a SIGEPROF</h1>
+            <p class="lead"><strong>Innovando la manera de planear,ejecutar y evaluar los proyectos formativos</strong>
+            </p>
+        </section>
+    </header>
+
+    <main>
+        <!--Introducción-->
+        <section class="container section-card" id="intro">
+            <h2 class="section-title">Introducción</h2>
+            <p style="font-size: 22px;">SIGEPROF, como su nombre lo indica, significa Sistema de Gestión de Proyectos
+                Formativos. Es un sistema para identificar si un proyecto formativo está siendo desarrollado, si se
+                puede probar y el estado en el que se encuentra.</p>
+        </section>
+
+        <!--Objetivos-->
+        <section class="container section-card" id="obj">
+            <h2 class="section-title">Objetivos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h4 class="fw-bold text-success">Objetivo General</h4>
+                    <p style="font-size: 20px;">Crear un sistema de información para gestionar proyectos formativos,
+                        para facilitar su lectura e interacción si están disponibles, y para que los instructores puedan
+                        determinar si el proyecto es viable o no para su evaluación.</p>
+                </div>
+                <div class="col-md-8">
+                    <h4 class="fw-bold text-success">Objetivos Específicos</h4>
+                    <ul style="font-size: 20px;">
+                        <li>Desarrollar un sistema de información para gestionar proyectos formativos de las sedes SENA
+                            del oriente antioqueño.</li>
+                        <li>Requerimientos del sistema.</li>
+                        <li>Análisis y diseño del sistema.</li>
+                        <li>Codificación del sistema.</li>
+                        <li>Pruebas de sistema.</li>
+                        <li>Implementación del sistema.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--Mision y Vision-->
+        <section class="container section-card" id="obj">
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <h2 class="fw-bold text-success, section-title">Mision </h2>
+                    <p style="font-size: 20px;">Desarrollar y mantener un sistema de información eficiente y accesible
+                        que permita gestionar, visualizar y evaluar proyectos formativos en las sedes SENA del Oriente
+                        Antioqueño. SIGEPROF busca facilitar la interacción entre aprendices e instructores, promoviendo
+                        la organización, el seguimiento y la mejora continua de los procesos formativos mediante
+                        herramientas digitales como el tablero Kanban.</p>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold text-success, section-title">Vision </h2>
+                    <p style="font-size: 20px;">Ser la plataforma líder en la gestión de proyectos formativos del SENA,
+                        reconocida por su capacidad de fomentar la innovación, la colaboración y la transparencia en el
+                        desarrollo académico. SIGEPROF aspira a convertirse en un referente nacional en la
+                        transformación digital de los procesos educativos, impulsando el aprendizaje práctico y la
+                        evaluación efectiva de los proyectos formativos.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Problema y Solución-->
+        <section class="container section-card" id="prob">
+            <h2 class="section-title">Problema y Solución</h2>
+            <p style="font-size: 20px;">SIGEPROF está diseñado para mejorar un problema, que es la falta de organización
+                de los proyectos formativos. Con este proyecto queremos mejorar eso, que los aprendices puedan publicar
+                sus proyectos formativos, ya estén en proceso o terminados, y sus respectivos instructores, o cualquier
+                persona, puedan probarlos o testearlos.</p>
+        </section>
+
+        <!--Tablero Kanban-->
+        <section class="container section-card" id="kan">
+            <div class="row align-items-center">
+                <div class="col-md-5 mb-3">
+                    <h2 class="section-title">Tablero Kanban</h2>
+                    <p style="font-size: 20px;">
+                        Un tablero Kanban es una herramienta visual que permite gestionar proyectos y flujos de trabajo,
+                        representando cada etapa del proceso con columnas y tareas que se mueven a través de ellas. Su
+                        objetivo principal es mejorar la eficiencia, la visibilidad y el flujo de trabajo en un equipo,
+                        limitando el trabajo en curso y optimizando la entrega.
+                    </p>
+                </div>
+                <div class="col-md-7">
+                    <img src="assets/img/kanban.jpeg" alt="tablero_kanban" class="img-fluid rounded shadow" style="width: 100%; height: auto;">
+                </div>
+            </div>
+        </section>
+
+        <!--Integrantes-->
+        <section class="container section-card" id="intg">
+            <h2 class="section-title">Integrantes</h2>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 mb-3">
+                    <div class="card card-integrante">
+                        <img class="card-img-top" src="assets/img/jose.jpg" alt="Jose David Cardona"
+                            style="max-width: 100%; height: 600px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Jose David Cardona</h4>
+                            <ul class="list-unstyled card-text">
+                                <li>Estudiante 11° PIO XI</li>
+                                <li>Técnico en Programación de9 Software</li>
+                                <li>Participante SoftParty 2025</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 mb-3">
+                    <div class="card card-integrante">
+                        <img class="card-img-top" src="assets/img/dres.jpg" alt="Andres Julian Lopez"
+                            style="max-width: 100%; height: 600px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Andres Julian Lopez</h4>
+                            <ul class="list-unstyled card-text">
+                                <li>Estudiante 11° PIO XI</li>
+                                <li>Técnico en Programación de Software</li>
+                                <li>Participante SoftParty 2025</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer Mejorado-->
+    <footer class="footer text-center">
+        <div class="container">
+            <span>&copy; 2024-2025 SIGEPROF | by ZJosDaX</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
